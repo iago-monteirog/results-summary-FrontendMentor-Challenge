@@ -9,7 +9,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: hsl(221, 100%, 49%);
+    background: linear-gradient(to top, hsl(221, 100%, 49%), hsl(221, 100%, 39%));
     color: hsl(0, 0%, 100%);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -31,7 +31,7 @@ header h3 {
     border-radius: 50%;
     background: linear-gradient(to top, hsl(221, 100%, 39%), hsl(221, 100%, 48%));
 
-  }
+}
 
 .score p {
     color: rgba(255, 255, 255, 0.40);
@@ -39,7 +39,7 @@ header h3 {
     font-size: 1rem;
     margin-top: 13px;
 }
-  
+
 .score-number {
     margin-top: 25px;
     font-size: 48px;
@@ -67,22 +67,127 @@ header h3 {
     font-weight: 500;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 25px;
-}
-
 main h2 {
+    margin-top: 20px;
+    margin-left: 30px;
+    align-items: center;
+    text-align: start;
     font-size: 1.2rem;
 }
 
 .result__card {
     display: flex;
-    margin-top: 20px;
+    margin: 10px 24px;
     justify-content: space-between;
+    align-items: center;
+    border: 1px solid none;
+    border-radius: 8px;
+    height: 35px;
+    padding: 5px 10px;
 }
 
+.reaction {
+    background-color: hsl(0, 100%, 94%);
+}
 
-  
+.memory {
+    background-color: hsl(39, 100%, 94%);
+}
+
+.verbal {
+    background-color: hsl(166, 100%, 94%);
+}
+
+.visual {
+    background-color: hsl(234, 85%, 94%);
+}
+
+.category {
+    display: flex;
+    gap: 5px;
+}
+
+.reaction .category span {
+    color: hsl(0, 100%, 67%)
+}
+
+.memory .category span {
+    color: hsl(39, 100%, 56%);
+}
+
+.verbal .category span {
+    color: hsl(166, 100%, 37%)
+}
+
+.visual .category span {
+    color: hsl(234, 85%, 45%)
+}
+
+.score__category {
+    display: flex;
+    font-weight: 700;
+    gap: 7px;
+}
+
+.score__category p {
+    color: hsl(224, 5%, 73%);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn button {
+    background-color: hsl(224, 30%, 54%);
+    border: none;
+    color: hsl(0, 100%, 100%);
+    font-weight: 700;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 30px;
+    width: 85%;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.btn button:hover {
+    background-color: hsl(224, 30%, 44%);
+}
+
+footer {
+    margin-top: 80px;
+}
+
+@media (min-width: 1300px) {
+    body {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      main {
+        min-height: 100%;
+        width: 60%;
+        border: 1px solid;
+        border-radius: 10px;
+      }
+      
+      header {
+        height: 100%;
+        border: 1px solid;
+        border-radius: 10px;
+      }
+}
+
